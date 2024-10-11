@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsSearch } from "../../redux/actions/productsAction";
 
 const ViewSearchProductsHook = () => {
-  let limit = 8;
+  let limit = 6;
   const dispatch = useDispatch();
 
   const getProduct = async () => {
@@ -82,7 +82,7 @@ const ViewSearchProductsHook = () => {
   let pagination = [];
   try {
     if (allProducts.paginationResult) {
-      pagination = allProducts.paginationResult.numberOfPage;
+      pagination = allProducts.paginationResult.numberOfPages;
     } else {
       pagination = [];
     }
